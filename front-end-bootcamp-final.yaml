@@ -1,0 +1,17 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+name: front-end-bootcamp-final
+region: blr
+static_sites:
+- build_command: npm run build
+  environment_slug: node-js
+  github:
+    branch: master
+    deploy_on_push: true
+    repo: vartika-jain1996/front-end-bootcamp-final
+  name: front-end-bootcamp-final
+  catchall_document: index.html
+  routes:
+  - path: /
+  source_dir: /
